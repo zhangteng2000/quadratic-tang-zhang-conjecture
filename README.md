@@ -52,5 +52,37 @@ From the repository root, run
 ```bash
 cd supplement
 python verify_certificate.py certificate.json
+
+
+## Formalization status
+
+A Lean 4 formalization of the proof is in preparation.
+
+The Lean formalization is not yet part of the present release. It will be
+added to this repository when the corresponding source files are ready for
+public verification.
+
+## Verification status
+
+The supplied computational certificates have been replayed successfully by
+the verification programs included in this repository.
+
+The repository is made public to facilitate independent checking of both the
+mathematical argument and the computer-assisted component.
+
+## Citation
+
+When citing this work, please cite the manuscript and, when appropriate, the
+specific GitHub release used for verification.
+
+A permanent archival DOI will be added once a fixed release has been deposited
+in an archival repository.
+
+## Author
+
+Teng Zhang  
+School of Mathematics and Statistics  
+Xi'an Jiaotong University  
+Xi'an 710049, P. R. China
 python verify_independent.py certificate.json
 python analytic_audit.py
