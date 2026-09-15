@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "checks": 26,
+  "m0": 1000000,
+  "verified": [
+    "27/10 < e < 11/4 via the exponential series",
+    "sqrt(e) < 5/3",
+    "13 < log(10^6) < 14",
+    "log(3*10^6/8) > 12",
+    "log(10^6/20) > 4",
+    "decreasing-interval coefficient < 7/m",
+    "near-boundary integral coefficient < 60/m",
+    "near-boundary exponent dominates 4 log m",
+    "monotonicity thresholds in the two exponential estimates",
+    "polar logarithmic exponent exceeds nine",
+    "C < 61/m < a/2 in the near region",
+    "small-alpha endpoint estimate at m=16; sequence decreases afterwards",
+    "large-alpha endpoint estimate",
+    "finite-degree correction c >= 99999/100000",
+    "m^(4/(m+2)) < 1001/1000",
+    "(8/3)^(4/3) < 4",
+    "small-a increasing-interval coefficient < 5/(2 log m)",
+    "small-a decreasing-interval bound < .292",
+    "small-a total error < 1/2",
+    "small-a endpoint exponent and base",
+    "monotonicity in delta of (1-delta)*(m*delta/2)^(-c/delta)",
+    "cube-root bound for A0=375000",
+    "A0^(1/75000) < 1001/1000",
+    "large-a increasing-interval error < .016",
+    "large-a total error < .017 < .05",
+    "1-sqrt(.9) > .05"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "mechanical editorial and PDF-boundary checks, not a proof of mathematical correctness",
+  "pdf_pages": 17,
+  "paper_size_points": [
+    612,
+    792
+  ],
+  "bibliography_entries": 17,
+  "all_entries_cited": true,
+  "bibliography_order": "alphabetical by author, chronological for repeated authors",
+  "bibliography_label_scheme_validated": true,
+  "numbered_equation_labels": 36,
+  "all_numbered_equations_referenced": true,
+  "undefined_cross_references": [],
+  "duplicate_labels": [],
+  "uncited_bibliography": [],
+  "undefined_citations": [],
+  "theorem_environments_with_optional_titles": [],
+  "mathematical_environments": 19,
+  "keywords": 5,
+  "source_ascii": true,
+  "compiler_warnings": [],
+  "text_outside_page": [],
+  "certificate_sha256": "8384d62a377b4fcac4080d0e05979d7a6fcf90437b7e4911927a5403d4052709",
+  "tex_sha256": "b506efd73b2a9e3f168f35f2710a0eb48bc28b9b41c442e43e1bc818c65be588",
+  "pdf_sha256": "162a83df61b4da022f2681a9acf00a33737947b11536898bc6f4a4b8799a05f6"
+}

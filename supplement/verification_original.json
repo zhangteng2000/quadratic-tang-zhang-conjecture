@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "arithmetic": "100-bit outward-rounded dyadic integer intervals",
+  "m_range": [
+    5,
+    999999
+  ],
+  "a_range": [
+    0,
+    1
+  ],
+  "degree_blocks": 430,
+  "parameter_boxes": 6593,
+  "criteria": {
+    "center-cubic": 2054,
+    "center-monotone": 5,
+    "boundary": 531,
+    "direct": 4003
+  },
+  "certificate_sha256": "8384d62a377b4fcac4080d0e05979d7a6fcf90437b7e4911927a5403d4052709",
+  "verification_seconds": 18.299
+}
