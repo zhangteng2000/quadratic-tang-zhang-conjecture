@@ -1,74 +1,56 @@
-# Quadratic Tang–Zhang manuscript and reproducibility package
+# Quadratic Tang--Zhang Conjecture
 
-This package contains the revised English research manuscript, its compiled PDF,
-three-round internal review notes, a reference-verification ledger, and the
-computational supplement used in the proof.
+This repository contains the manuscript and the complete computational
+materials accompanying a computer-assisted proof of the quadratic
+Tang--Zhang conjecture.
 
-## Main files
+## Main result
 
-- `quadratic_tang_zhang_revised.tex`: complete editable English LaTeX source.
-- `quadratic_tang_zhang_revised.pdf`: compiled 17-page manuscript.
-- `revision_report_zh.md`: mathematical and editorial review, in Chinese.
-- `reference_audit_zh.md`: source locations, DOIs, and access limitations.
-- `editorial_audit.json`: automatic cross-reference and typesetting checks.
-- `supplement/`: certificate, generator, two checkers, and recorded outputs.
+Let \(p\) be a complex polynomial of degree \(n\ge 2\), all of whose zeros
+lie in the closed unit disk. Let \(\zeta\) be a zero of \(p\), and let
+\(c_1,\ldots,c_{n-1}\) be the critical points of \(p\), counted with
+multiplicity. We prove that
 
-## Compile
+\[
+\sum_{j=1}^{n-1}\frac{1}{|\zeta-c_j|^2}\ge n-1.
+\]
 
-A TeX installation containing the packages in the supplied amsart preamble is
-required. In particular, bbm, TikZ/PGFPlots, doi, bookmark, and microtype must be
-installed. No external images or bibliography database are required.
+The equality case is also determined.
 
-```sh
-pdflatex -interaction=nonstopmode -halt-on-error quadratic_tang_zhang_revised.tex
-pdflatex -interaction=nonstopmode -halt-on-error quadratic_tang_zhang_revised.tex
-```
+As a consequence of the power-mean inequality, the corresponding estimate
+holds for every exponent \(\lambda\ge 2\).
 
-## Reproduce the finite verification
+## Manuscript
 
-Use Python 3 with its standard library. Run from the supplement directory:
+- `quadratic_tang_zhang_revised.pdf` — compiled manuscript.
+- `quadratic_tang_zhang_revised.tex` — complete LaTeX source.
 
-```sh
+## Computational supplement
+
+The directory `supplement/` contains the computer-assisted part of the proof.
+
+In particular:
+
+- `certificate.json` — rigorous interval certificate for the finite range.
+- `certify.py` — certificate generator.
+- `verify_certificate.py` — certificate verifier.
+- `verify_independent.py` — separately implemented certificate verifier.
+- `analytic_audit.py` — exact audit of the numerical inequalities used in
+  the analytic part of the proof.
+- `verification_original.json` — recorded output of the first verifier.
+- `verification_independent.json` — recorded output of the second verifier.
+- `verification_analytic.json` — recorded output of the analytic audit.
+
+The file `SHA256SUMS.txt` records SHA-256 checksums for the distributed files.
+
+## Reproducing the verification
+
+Only Python 3 and the Python standard library are required.
+
+From the repository root, run
+
+```bash
 cd supplement
 python verify_certificate.py certificate.json
 python verify_independent.py certificate.json
 python analytic_audit.py
-```
-
-The certificate covers every integer `5 <= m <= 999999` and the continuous
-parameter interval `0 <= a <= 1`. The actual endpoints `a=0,1` are treated
-analytically in the manuscript. The theorem uses `n=m+1`.
-
-The original checker imports its arithmetic implementation from `certify.py`.
-The separate checker imports neither original program and uses exact rational
-coefficients and 160-bit directed power enclosures. Both verify the same
-mathematical reduction. Their agreement is not a Lean formalization or independent
-human peer review.
-
-The original checker and generator retain their supplied implementation; no
-mathematical acceptance tests were loosened to obtain the equality statement.
-The extension from `s<1` to `s<=1` is justified in the manuscript, not by changing
-certificate thresholds.
-
-## Regenerate, rather than only replay
-
-```sh
-python certify.py --stop 1000000 --out regenerated_certificate.json
-python verify_independent.py regenerated_certificate.json
-```
-
-Regeneration need not produce a byte-identical search history. An accepted
-certificate must pass all inequality and complete-cover tests. Ordinary floating
-point in the generator is used only for proposals or reporting, never for the
-acceptance of a rectangle.
-
-## Scope and publication status
-
-This is an AI-assisted research manuscript. It is not a published theorem,
-external referee report, or proof-assistant-certified result. Its claims are the
-quadratic inequality, equality classification, and the power-mean consequences
-for exponents at least two. It does not claim the exponent-one conjecture.
-
-Before submission/publication, the author should arrange independent review of
-the analytic reduction and a permanent public archive for the essential
-computational supplement. No repository DOI has been invented for this package.
