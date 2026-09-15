@@ -54,3 +54,49 @@ cd supplement
 python verify_certificate.py certificate.json
 python verify_independent.py certificate.json
 python analytic_audit.py
+```
+
+The supplied certificate covers the finite parameter range used in the paper.
+The large-degree range is treated analytically in the manuscript.
+
+## Formalization status
+
+A Lean 4 formalization of the proof is in preparation.
+
+The Lean formalization is not yet part of the present release. It will be
+added to this repository when the corresponding source files are ready for
+public verification.
+
+## Verification status
+
+The supplied computational certificates have been replayed successfully by
+the verification programs included in this repository.
+
+The repository is made public to facilitate independent checking of both the
+mathematical argument and the computer-assisted component.
+
+## Additional files
+
+- `revision_report_zh.md` — detailed record of the mathematical and editorial
+  revisions.
+- `reference_audit_zh.md` — bibliographic, DOI, and source-location audit.
+- `editorial_audit.json` — automated checks of cross-references and
+  typesetting consistency.
+
+These files document the preparation and verification of the manuscript and
+are not required for running the proof certificate.
+
+## Citation
+
+When citing this work, please cite the manuscript and, when appropriate, the
+specific GitHub release used for verification.
+
+A permanent archival DOI will be added once a fixed release has been deposited
+in an archival repository.
+
+## Author
+
+Teng Zhang  
+School of Mathematics and Statistics  
+Xi'an Jiaotong University  
+Xi'an 710049, P. R. China
