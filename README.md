@@ -7,12 +7,12 @@ Tang--Zhang conjecture.
 ## Main result
 
 Let \(p\) be a complex polynomial of degree \(n\ge 2\), all of whose zeros
-lie in the closed unit disk. Let \(\zeta\) be a zero of \(p\), and let
-\(c_1,\ldots,c_{n-1}\) be the critical points of \(p\), counted with
+lie in the closed unit disk. Let \(a\) be a zero of \(p\), and let
+\(\zeta_1,\ldots,\zeta_{n-1}\) be the critical points of \(p\), counted with
 multiplicity. We prove that
 
 \[
-\sum_{j=1}^{n-1}\frac{1}{|\zeta-c_j|^2}\ge n-1.
+\sum_{j=1}^{n-1}\frac{1}{|a-\zeta_j|^2}\ge n-1.
 \]
 
 The equality case is also determined.
@@ -22,8 +22,7 @@ holds for every exponent \(\lambda\ge 2\).
 
 ## Manuscript
 
-- `quadratic_tang_zhang_revised.pdf` — compiled manuscript.
-- `quadratic_tang_zhang_revised.tex` — complete LaTeX source.
+- `Quadratic_Tang_Zhang_inequality.pdf` — compiled manuscript.
 
 ## Computational supplement
 
@@ -41,7 +40,6 @@ In particular:
 - `verification_independent.json` — recorded output of the second verifier.
 - `verification_analytic.json` — recorded output of the analytic audit.
 
-The file `SHA256SUMS.txt` records SHA-256 checksums for the distributed files.
 
 ## Reproducing the verification
 
@@ -75,24 +73,6 @@ the verification programs included in this repository.
 The repository is made public to facilitate independent checking of both the
 mathematical argument and the computer-assisted component.
 
-## Additional files
-
-- `revision_report_zh.md` — detailed record of the mathematical and editorial
-  revisions.
-- `reference_audit_zh.md` — bibliographic, DOI, and source-location audit.
-- `editorial_audit.json` — automated checks of cross-references and
-  typesetting consistency.
-
-These files document the preparation and verification of the manuscript and
-are not required for running the proof certificate.
-
-## Citation
-
-When citing this work, please cite the manuscript and, when appropriate, the
-specific GitHub release used for verification.
-
-A permanent archival DOI will be added once a fixed release has been deposited
-in an archival repository.
 
 ## Author
 
