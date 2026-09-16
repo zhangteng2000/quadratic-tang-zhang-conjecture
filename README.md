@@ -57,13 +57,6 @@ python analytic_audit.py
 The supplied certificate covers the finite parameter range used in the paper.
 The large-degree range is treated analytically in the manuscript.
 
-## Formalization status
-
-A Lean 4 formalization of the proof is in preparation.
-
-The Lean formalization is not yet part of the present release. It will be
-added to this repository when the corresponding source files are ready for
-public verification.
 
 ## Verification status
 
@@ -74,16 +67,18 @@ The repository is made public to facilitate independent checking of both the
 mathematical argument and the computer-assisted component.
 
 
-## Author
-
-Teng Zhang  
-School of Mathematics and Statistics  
-Xi'an Jiaotong University  
-Xi'an 710049, P. R. China
-
 ## Lean 4 formalization
 
 A complete Lean 4 formalization of the main theorem and equality
 classification is available at:
 
 https://github.com/zhangteng2000/quadratic-tang-zhang-lean4
+
+
+
+## Author
+
+Teng Zhang  
+School of Mathematics and Statistics  
+Xi'an Jiaotong University  
+Xi'an 710049, P. R. China
