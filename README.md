@@ -100,3 +100,10 @@ Teng Zhang
 School of Mathematics and Statistics  
 Xi'an Jiaotong University  
 Xi'an 710049, P. R. China
+
+## Lean 4 formalization
+
+A complete Lean 4 formalization of the main theorem and equality
+classification is available at:
+
+https://github.com/zhangteng2000/quadratic-tang-zhang-lean4
